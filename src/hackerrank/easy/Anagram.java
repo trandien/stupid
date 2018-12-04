@@ -21,9 +21,9 @@ public class Anagram {
             }
         }
         for (int k = 0; k < 26; k++) {
-            result += Math.abs(arrA[k] - arrB[k]);
+            result += arrA[k] - arrB[k] > 0 ? Math.abs(arrA[k] - arrB[k]) : 0;
         }
-        return result / 2;
+        return result;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
