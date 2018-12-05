@@ -18,8 +18,11 @@ public class LargestPermutation {
         }
         for (int i = 0; i < k; i++) {
             int tmp = arr[i];
+            int tmp2 =arrIndex[arrSort[i]];
             arr[arrIndex[arrSort[i]]] = arr[i];
             arr[i] = arrSort[i];
+            arrIndex[arrSort[i]] = i;
+            arrIndex[tmp] = tmp2;
         }
         return arr;
     }
